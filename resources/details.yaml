@@ -1,0 +1,74 @@
+name: Noah Rosamilia
+links:
+  ivoah.net: https://ivoah.net
+  LinkedIn: https://www.linkedin.com/in/noah-rosamilia-7641a11bb
+  GitHub: https://github.com/Ivoah
+location: Monroeville, PA
+email: noah@ivoah.net
+phone: (518) 949-0268
+
+summary: |
+  I am a full stack developer and have been programming for **over a decade**, with **4 years** of professional experience.
+  I have a passion for **functional programming**, and love breaking down complex problems into elegant solutions.
+  I also have experience in **server administration** and have managed linux servers both personally and professionally.
+
+skills:
+  - name: Programming Languages
+    items: [Scala, Python, Go, Java, Lua, C#, Swift, "assembly (z80, 6502)", JavaScript, Wolfram, Bash, Perl]
+  - name: Other Languages
+    items: [HTML, CSS, SQL, Regex]
+  - name: Frameworks
+    items: [Bottle.py, Vue.js, jQuery]
+  - name: Tools
+    items: [Git, VS Code, IntelliJ, Unity, Blender]
+  - name: Technologies
+    items: [Linux, Kubernetes, Ansible]
+
+experience:
+- role: Software Engineer
+  dates: September 2023 - Present
+  employer: Grant Street Group
+  location: Remote - Pittsburgh, PA
+  details:
+  - Created user account and infrastructure management tools for internal use
+  - Designed and implemented API in **Go** for simplifying IT procedures
+- role: Software Engineer
+  dates: May 2020 - April 2023
+  employer: NetApp
+  location: Remote - Cranberry Township, PA
+  details:
+  - Updated aging continuous deployment systems by converting **Perl** scripts to **Ansible** playbooks
+  - Designed and developed system in **Python** for managing log files at scale
+  - Created **web** frontend for running continuous integration tests using **Vue.js**
+  - Managed fleet of **Kubernetes** clusters for running continuous integration tests
+- role: Software Developer Intern
+  employer: Vigilant Cyber Systems
+  dates: Summer 2019
+  location: Mount Airy, NC
+  details:
+  - Completed 2 week **Scala** training course in 1 week
+  - Created node based editor for modeling **SQL** queries
+
+education:
+- school: Grove City College
+  location: Grove City, PA
+  dates: 2016 - 2020
+  degree: Bachelor of Science in Computer Science
+  details:
+  - "Major GPA: 3.61, Cumulative GPA: 3.41"
+  - "Honors: **Cum Laude**, **High Honors** in Computer Science"
+  - Participated in Grove City's programming team and **ranked competitively** in regional ICPC contests
+  - Worked as a TA during junior and senior years
+
+projects:
+- name: RayTracer
+  technology: Scala, Swing
+  github: Ivoah/RayTracing
+  details:
+  - Ray tracer written in **Scala** following the _Ray Tracing in One Weekend_ series
+- name: Vial
+  technology: Scala
+  github: Ivoah/vial
+  details:
+  - Micro web framework for **Scala**
+  - Created and used for my small personal projects
