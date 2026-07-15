@@ -1,4 +1,4 @@
 .bsp/
 .metals/
 .scala-build/
-resume.html
+*.html
