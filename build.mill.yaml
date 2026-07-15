@@ -1,8 +1,0 @@
-extends: ScalaModule
-scalaVersion: 3.8.2
-mvnDeps:
-- com.lihaoyi::scalatags:0.13.1
-- net.ivoah::vial:0.12.0
-- org.rogach::scallop:5.2.0
-- org.virtuslab::scala-yaml:0.3.0
-- org.commonmark:commonmark:0.29.0

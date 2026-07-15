@@ -8,30 +8,45 @@ email: noah@ivoah.net
 phone: (518) 949-0268
 
 summary: |
-  I am a full stack developer and have been programming for **over a decade**, with **4 years** of professional experience.
+  I am a full stack developer and have been programming for **over a decade**, with **6 years** of professional experience.
   I have a passion for **functional programming**, and love breaking down complex problems into elegant solutions.
   I also have experience in **server administration** and have managed linux servers both personally and professionally.
 
 skills:
   - name: Programming Languages
-    items: [Scala, Python, Go, Java, Lua, C#, Swift, "assembly (z80, 6502)", JavaScript, Wolfram, Bash, Perl]
+    items:
+    - Scala
+    - Go
+    - Swift
+    - Java
+    - Python
+    - Lua
+    - C#
+    - assembly (z80, 6502)
+    - Wolfram
+    - JavaScript
+    - Perl
   - name: Other Languages
     items: [HTML, CSS, SQL, Regex]
-  - name: Frameworks
-    items: [Bottle.py, Vue.js, jQuery]
-  - name: Tools
-    items: [Git, VS Code, IntelliJ, Unity, Blender]
   - name: Technologies
-    items: [Linux, Kubernetes, Ansible]
+    items: [Linux, Postgresql, Kubernetes, Ansible, REST, GraphQL]
 
 experience:
+- role: Technical Founder
+  dates: February 2026 - Present
+  employer: Stub-Social
+  location: Remote
+  details:
+  - Co-founded social media site for tracking personal baseball statistics
+  - Built website from scratch using **Scala**, **[Vial](https://github.com/Ivoah/vial)** (custom web framework), and **Postgresql**
 - role: Software Engineer
-  dates: September 2023 - Present
+  dates: September 2023 - February 2026
   employer: Grant Street Group
   location: Remote - Pittsburgh, PA
   details:
+  - Worked on highly available distributed backend microservices.
   - Created user account and infrastructure management tools for internal use
-  - Designed and implemented API in **Go** for simplifying IT procedures
+  - Designed and implemented **REST** API in **Go** for simplifying IT procedures
 - role: Software Engineer
   dates: May 2020 - April 2023
   employer: NetApp
@@ -39,7 +54,7 @@ experience:
   details:
   - Updated aging continuous deployment systems by converting **Perl** scripts to **Ansible** playbooks
   - Designed and developed system in **Python** for managing log files at scale
-  - Created **web** frontend for running continuous integration tests using **Vue.js**
+  - Created web frontend for running continuous integration tests using **Vue.js**
   - Managed fleet of **Kubernetes** clusters for running continuous integration tests
 - role: Software Developer Intern
   employer: Vigilant Cyber Systems
@@ -55,12 +70,18 @@ education:
   dates: 2016 - 2020
   degree: Bachelor of Science in Computer Science
   details:
-  - "Major GPA: 3.61, Cumulative GPA: 3.41"
+  - "Major GPA: 3.61, cumulative GPA: 3.41"
   - "Honors: **Cum Laude**, **High Honors** in Computer Science"
-  - Participated in Grove City's programming team and **ranked competitively** in regional ICPC contests
+  - Participated in Grove City's programming team and ranked competitively in regional **ICPC** contests
   - Worked as a TA during junior and senior years
 
 projects:
+- name: Line dancing visualizer
+  technology: Scala, ScalaJS
+  github: Ivoah/LineDancing2
+  details:
+  - Tool for visualizing English Country line dance formations
+  - Written with purely functional core and multiple frontends (desktop and [web](https://linedancing.ivoah.net))
 - name: RayTracer
   technology: Scala, Swing
   github: Ivoah/RayTracing
@@ -71,4 +92,3 @@ projects:
   github: Ivoah/vial
   details:
   - Micro web framework for **Scala**
-  - Created and used for my small personal projects
