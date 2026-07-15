@@ -76,17 +76,17 @@ education:
   - Worked as a TA during junior and senior years
 
 projects:
-- name: Line dancing visualizer
+- name: LineDancing2
   technology: Scala, ScalaJS
   github: Ivoah/LineDancing2
   details:
   - Tool for visualizing English Country line dance formations
   - Written with purely functional core and multiple frontends (desktop and [web](https://linedancing.ivoah.net))
-- name: RayTracer
-  technology: Scala, Swing
-  github: Ivoah/RayTracing
-  details:
-  - Ray tracer written in **Scala** following the _Ray Tracing in One Weekend_ series
+# - name: RayTracer
+#   technology: Scala, Swing
+#   github: Ivoah/RayTracing
+#   details:
+#   - Ray tracer written in **Scala** following the _Ray Tracing in One Weekend_ series
 - name: Vial
   technology: Scala
   github: Ivoah/vial
