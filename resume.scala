@@ -52,7 +52,7 @@ val _style = """
 }
 
 html {
-  background: black;
+  background: #FCF5E5;
 }
 
 body {
