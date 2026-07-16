@@ -41,7 +41,7 @@ case class Education(school: String, location: String, dates: String, degree: St
 case class Project(name: String, technology: String, github: String, details: Seq[String]) derives YamlDecoder
 
 val _style = """
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
