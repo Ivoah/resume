@@ -30,7 +30,7 @@ skills:
   - name: Other Languages
     items: [HTML, CSS, SQL, Regex]
   - name: Technologies
-    items: [Linux, Postgresql, Kubernetes, Ansible, REST, GraphQL]
+    items: [Linux, PostgreSQL, Kubernetes, Ansible, REST, GraphQL]
 
 experience:
 - role: Technical Founder
