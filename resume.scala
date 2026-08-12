@@ -24,7 +24,7 @@ object Markdown {
 
 private case class Details(
   name: String,
-  links: Map[String, String],
+  links: Seq[String],
   location: String,
   email: String,
   phone: String,
@@ -122,9 +122,7 @@ def resume(details: Details): String = doctype("html")(html(
         s"Location: ${details.location}"
     ),
     flex(
-      span(details.links.toSeq.map {
-        case (name, url) => a(href:=url, name)
-      }.join(StringFrag(" | "))),
+      span(details.links.toSeq.map(url => a(href:=url, url.stripPrefix("https://"))).join(StringFrag(" | "))),
       span(
         s"Email: ", a(href:=s"mailto:${details.email}", details.email),
         " | ",
