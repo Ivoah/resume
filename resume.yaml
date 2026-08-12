@@ -8,10 +8,10 @@ email: noah@ivoah.net
 phone: (518) 949-0268
 
 summary: |
-  I am a full stack developer and have been programming for **over a decade**, with **6 years** of professional experience.
-  I have a passion for **functional programming**, and love breaking down complex problems into elegant solutions.
-  I also have experience in **server administration** and have managed linux servers both personally and professionally.
-  In addition to software development I have experience with **embedded electronics** and basic electrical engineering skills.
+  Full stack developer with **6 years** of professional experience.
+  Passion for **functional programming** love of breaking down complex problems into elegant solutions.
+  Experience in **server administration** and managing linux servers both personally and professionally.
+  Casual experience with **embedded electronics** and basic electrical engineering skills.
 
 skills:
   - name: Programming Languages
@@ -39,7 +39,7 @@ experience:
   location: Remote
   details:
   - Co-founded social media site for tracking personal baseball statistics
-  - Built website from scratch using **Scala**, **[Vial](https://github.com/Ivoah/vial)** (custom web framework), and **Postgresql**
+  - Built website from scratch using **Scala**, **[Vial](https://github.com/Ivoah/vial)** (custom web framework), and **PostgreSQL**
 - role: Software Engineer
   dates: September 2023 - February 2026
   employer: Grant Street Group
@@ -68,7 +68,7 @@ experience:
 education:
 - school: Grove City College
   location: Grove City, PA
-  dates: 2016 - 2020
+  dates: May 2020
   degree: Bachelor of Science in Computer Science
   details:
   - "Major GPA: 3.61, cumulative GPA: 3.41"

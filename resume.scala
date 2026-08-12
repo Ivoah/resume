@@ -130,7 +130,7 @@ def resume(details: Details): String = doctype("html")(html(
       )
     ),
 
-    section("Full Stack Developer")(
+    section("Summary")(
       Markdown.render(details.summary)
     ),
 
@@ -144,16 +144,16 @@ def resume(details: Details): String = doctype("html")(html(
 
     section("Professional Experience")(
       for (experience <- details.experience) yield div(
-        flex(strong(experience.employer), experience.location),
-        flex(em(experience.role), experience.dates),
+        flex(strong(experience.role), experience.dates),
+        flex(em(experience.employer), experience.location),
         ul(experience.details.map(d => li(Markdown.render(d))))
       )
     ),
 
     section("Education")(
       for (education <- details.education) yield div(
-        flex(strong(education.school), education.location),
-        flex(em(education.degree), em(education.dates)),
+        flex(strong(education.degree), education.dates),
+        flex(em(education.school), em(education.location)),
         ul(education.details.map(d => li(Markdown.render(d))))
       )
     ),
