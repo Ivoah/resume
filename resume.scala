@@ -134,76 +134,59 @@ case class Resume(
   header: Header,
   pages: Seq[Page]
 ) extends Renderable derives YamlDecoder {
-  val _style = """
-    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-
-    *:not(dialog) {
-      margin: 0;
-    }
-
-    html {
-      background: #FCF5E5;
-    }
-
-    .page {
-      width: 8.5in;
-      height: 11in;
-      margin: 16px auto;
-      background: white;
-
-      font-family: "Source Sans 3", sans-serif;
-      padding: 16px;
-      font-size: 10pt;
-
-      @media print {
-        margin: 0;
-      }
-    }
-
-    a {
-      color: inherit;
-      text-decoration: underline;
-    }
-
-    h1 {
-      font-variant: small-caps;
-    }
-
-    h3 {
-      color: blue;
-      font-variant: small-caps;
-    }
-
-    .flex {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-
-    .section {
-      margin: 8px 0;
-      > div {
-        margin: 8px;
-        > div {
-          margin: 8px 0;
-        }
-      }
-    }
-  """
-
   def render: Frag = html(
     head(
-      tag("style")(raw(_style)),
+      tag("style")(raw("""
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+        *, *::before, *::after {box-sizing: border-box;}
+        *:not(dialog) {margin: 0;}
+
+        html {background: #FCF5E5; font-family: "Source Sans 3", sans-serif;}
+				a {color: inherit; text-decoration: underline;}
+        h1 {font-variant: small-caps;}
+        h3 {color: blue; font-variant: small-caps;}
+
+        .page {
+          position: relative;
+          width: 8.5in;
+          height: 11in;
+          margin: 16px auto;
+          background: white;
+
+          padding: 16px;
+          font-size: 10pt;
+
+          @media print {
+            margin: 0;
+          }
+        }
+
+        .flex {
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+        }
+
+        .section {
+          margin: 8px 0;
+          > div {
+            margin: 8px;
+            > div {
+              margin: 8px 0;
+            }
+          }
+        }
+
+        .pageCount {position: absolute; bottom: 16px; width: 100%; text-align: center;}
+      """)),
       tag("title")(header.name)
     ),
     body(
-      for (page <- pages) yield div(cls:="page",
+      for ((page, i) <- pages.zipWithIndex) yield div(cls:="page",
         header.render,
-        page.render
+        page.render,
+        div(cls:="pageCount", s"${i+1}/${pages.length}")
       )
     )
   )

@@ -61,7 +61,8 @@ pages:
         details:
         - Recognized for completing 2 week **Scala** training course in 1 week
         - Created node based editor for modeling **SQL** queries
-
+        
+  - sections:
     - type: Education
       schools:
       - name: Grove City College
