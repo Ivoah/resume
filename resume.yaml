@@ -15,18 +15,7 @@ summary: |
 
 skills:
   - name: Programming Languages
-    items:
-    - Scala
-    - Go
-    - Swift
-    - Java
-    - Python
-    - Lua
-    - C#
-    - assembly (z80, 6502)
-    - Wolfram
-    - JavaScript
-    - Perl
+    items: [Scala, Go, Swift, Java, Python, Lua, C#, "assembly (z80, 6502)", Wolfram, JavaScript, Perl]
   - name: Other Languages
     items: [HTML, CSS, SQL, Regex]
   - name: Technologies
@@ -38,14 +27,15 @@ experience:
   employer: Stub-Social
   location: Remote
   details:
-  - Co-founded social media site for tracking personal baseball statistics
+  - Co-founded social media startup for tracking personal baseball statistics
+  - Built out tech stack from bare metal to live site
   - Built website from scratch using **Scala**, **[Vial](https://github.com/Ivoah/vial)** (custom web framework), and **PostgreSQL**
 - role: Software Engineer
   dates: September 2023 - February 2026
   employer: Grant Street Group
   location: Remote - Pittsburgh, PA
   details:
-  - Worked on highly available distributed backend microservices.
+  - Worked on highly available distributed backend microservices to support customer facing product
   - Created user account and infrastructure management tools for internal use
   - Designed and implemented **REST** API in **Go** for simplifying IT procedures
 - role: Software Engineer
@@ -62,19 +52,18 @@ experience:
   dates: Summer 2019
   location: Mount Airy, NC
   details:
-  - Completed 2 week **Scala** training course in 1 week
+  - Recognized for completing 2 week **Scala** training course in 1 week
   - Created node based editor for modeling **SQL** queries
 
 education:
 - school: Grove City College
   location: Grove City, PA
   dates: May 2020
-  degree: Bachelor of Science in Computer Science
+  degree: Bachelor of Science in Computer Science, Cum Laude, High Honors in Computer Science
   details:
   - "Major GPA: 3.61, cumulative GPA: 3.41"
-  - "Honors: **Cum Laude**, **High Honors** in Computer Science"
   - Participated in Grove City's programming team and ranked competitively in regional **ICPC** contests
-  - Worked as a TA during junior and senior years
+  - Worked as a TA for computer science classes during junior and senior years
 
 projects:
 - name: LineDancing2
