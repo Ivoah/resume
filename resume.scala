@@ -55,75 +55,57 @@ case class Header(
 
 case class WithType(`type`: String) derives YamlDecoder
 
-sealed trait Section(title: String, body: Frag*) extends Product with Serializable with Renderable {
+case class Section(title: String, items: Seq[SectionItem]) extends Renderable derives YamlDecoder {
   def render: Frag = div(cls:="section",
     h3(title),
     hr(),
-    div(body)
+    div(items.map(_.render))
   )
 }
 
-given YamlDecoder[Section] {
-  def construct(node: Node)(implicit settings: LoadSettings): Either[ConstructError, Section] = {
-    node.as[WithType]
-    .map(_.`type`).flatMap {
-      case "Summary" => node.as[Summary]
-      case "Skills" => node.as[Skills]
-      case "Professional Experience" => node.as[ProfessionalExperience]
-      case "Education" => node.as[Education]
-      case "Personal Projects" => node.as[PersonalProjects]
-    }
-    .left.map(_.asInstanceOf[ConstructError])
+sealed trait SectionItem extends Renderable
+
+given YamlDecoder[SectionItem] {
+  def construct(node: Node)(implicit settings: LoadSettings): Either[ConstructError, SectionItem] = {
+    node
+      .as[WithType].map(_.`type`).flatMap {
+        case "Markdown" => node.as[Markdown]
+        case "Skills" => node.as[Skills]
+        case "Experience" => node.as[Experience]
+        case "Project" => node.as[Project]
+      }
+      .left.map(_.asInstanceOf[ConstructError])
   }
 }
 
-case class Summary(content: String) extends Section("Summary", Markdown.render(content)) derives YamlDecoder
+case class Markdown(content: String) extends SectionItem derives YamlDecoder {
+  def render: Frag = Markdown.render(content)
+}
 
-case class Skills(skills: Seq[Skills.Skill]) extends Section(
-  "Technical Skills",
-  div(style:="display: grid; grid-template-columns: max-content 16px auto;",
+case class Skills(skills: Seq[Skills.Skill]) extends SectionItem derives YamlDecoder {
+  def render: Frag = div(style:="display: grid; grid-template-columns: max-content 16px auto;",
     skills.flatMap(skill => Seq(
       strong(skill.name), span(style:="justify-self: center;", ":"), span(skill.items.join(", "))
     ))
   )
-) derives YamlDecoder
+}
 object Skills {
   case class Skill(name: String, items: Seq[String]) derives YamlDecoder
 }
 
-case class ProfessionalExperience(jobs: Seq[ProfessionalExperience.Job]) extends Section(
-	"Professional Experience",
-	for (job <- jobs) yield div(
-		flex(strong(job.role), job.dates),
-		flex(em(job.employer), job.location),
-		ul(job.details.map(d => li(Markdown.render(d))))
-	)
-) derives YamlDecoder
-object ProfessionalExperience {
-	case class Job(role: String, dates: String, employer: String, location: String, details: Seq[String]) derives YamlDecoder
+case class Experience(name: String, dates: String, at: String, location: String, details: Seq[String]) extends SectionItem derives YamlDecoder {
+  def render: Frag = div(
+    flex(strong(name), dates),
+    flex(em(at), location),
+    ul(details.map(d => li(Markdown.render(d))))
+  )
 }
 
-case class Education(schools: Seq[Education.School]) extends Section(
-	"Education",
-	for (school <- schools) yield div(
-    flex(strong(school.degree), school.dates),
-    flex(em(school.name), em(school.location)),
-    ul(school.details.map(d => li(Markdown.render(d))))
+case class Project(name: String, technology: String, github: String, details: Seq[String]) extends SectionItem derives YamlDecoder {
+  def render: Frag = div(
+    flex(strong(name), em(technology), span("GitHub: ", a(href:=s"https://github.com/${github}", github))),
+    ul(details.map(d => li(Markdown.render(d))))
   )
-) derives YamlDecoder
-object Education {
-  case class School(name: String, location: String, dates: String, degree: String, details: Seq[String]) derives YamlDecoder
-}
-
-case class PersonalProjects(projects: Seq[PersonalProjects.Project]) extends Section(
-	"Personal Projects",
-	for (project <- projects) yield div(
-    flex(strong(project.name), em(project.technology), span("GitHub: ", a(href:=s"https://github.com/${project.github}", project.github))),
-    ul(project.details.map(d => li(Markdown.render(d))))
-  )
-) derives YamlDecoder
-object PersonalProjects {
-  case class Project(name: String, technology: String, github: String, details: Seq[String]) derives YamlDecoder
 }
 
 case class Page(sections: Seq[Section]) extends Renderable derives YamlDecoder {
@@ -143,7 +125,7 @@ case class Resume(
         *:not(dialog) {margin: 0;}
 
         html {background: #FCF5E5; font-family: "Source Sans 3", sans-serif;}
-				a {color: inherit; text-decoration: underline;}
+        a {color: inherit; text-decoration: underline;}
         h1 {font-variant: small-caps;}
         h3 {color: blue; font-variant: small-caps;}
 
@@ -186,7 +168,8 @@ case class Resume(
       for ((page, i) <- pages.zipWithIndex) yield div(cls:="page",
         header.render,
         page.render,
-        div(cls:="pageCount", s"${i+1}/${pages.length}")
+        if (pages.length > 1) div(cls:="pageCount", s"${i+1}/${pages.length}")
+        else frag()
       )
     )
   )

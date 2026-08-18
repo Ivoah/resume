@@ -10,73 +10,83 @@ header:
 
 pages:
   - sections:
-    - type: Summary
-      content: |
-        Full stack developer with **6 years** of professional experience.
-        Passion for **functional programming** love of breaking down complex problems into elegant solutions.
-        Experience in **server administration** and managing linux servers both personally and professionally.
-        Casual experience with **embedded electronics** and basic electrical engineering skills.
-        Looking for roles that will continue to grow my backend development skills and push me to solve interesting problems.
+    - title: Summary
+      items:
+      - type: Markdown
+        content: |
+          Full stack developer with **6 years** of professional experience.
+          Passion for **functional programming** love of breaking down complex problems into elegant solutions.
+          Experience in **server administration** and managing linux servers both personally and professionally.
+          Casual experience with **embedded electronics** and basic electrical engineering skills.
+          Looking for roles that will continue to grow my backend development skills and push me to solve interesting problems.
 
-    - type: Skills
-      skills:
-      - name: Programming Languages
-        items: [Scala, Go, Swift, Java, Python, Lua, C#, "assembly (z80, 6502)", Wolfram, JavaScript, Perl]
-      - name: Other Languages
-        items: [HTML, CSS, SQL, Regex]
-      - name: Technologies
-        items: [Linux, PostgreSQL, Kubernetes, Ansible, REST, GraphQL]
+    - title: Technical Skills
+      items:
+      - type: Skills
+        skills:
+        - name: Programming Languages
+          items: [Scala, Go, Swift, Java, Python, Lua, C#, "assembly (z80, 6502)", Wolfram, JavaScript, Perl]
+        - name: Other Languages
+          items: [HTML, CSS, SQL, Regex]
+        - name: Technologies
+          items: [Linux, PostgreSQL, Kubernetes, Ansible, REST, GraphQL]
 
-    - type: Professional Experience
-      jobs:
-      - role: Technical Founder
+    - title: Professional Experience
+      items:
+      - type: Experience
+        name: Technical Founder
         dates: February 2026 - Present
-        employer: Stub-Social
+        at: Stub-Social
         location: Remote
         details:
         - Co-founded social media startup for tracking personal baseball statistics
         - Built out tech stack from bare metal to live site
         - Built website from scratch using **Scala**, **[Vial](https://github.com/Ivoah/vial)** (custom web framework), and **PostgreSQL**
-      - role: Software Engineer
+      - type: Experience
+        name: Software Engineer
         dates: September 2023 - February 2026
-        employer: Grant Street Group
+        at: Grant Street Group
         location: Remote - Pittsburgh, PA
         details:
         - Worked on highly available distributed backend microservices to support customer facing product
         - Created user account and infrastructure management tools for internal use
         - Designed and implemented **REST** API in **Go** for simplifying IT procedures
-      - role: Software Engineer
+      - type: Experience
+        name: Software Engineer
         dates: May 2020 - April 2023
-        employer: NetApp
+        at: NetApp
         location: Remote - Cranberry Township, PA
         details:
         - Updated aging continuous deployment systems by converting **Perl** scripts to **Ansible** playbooks
         - Designed and developed system in **Python** for managing log files at scale
         - Created web frontend for running continuous integration tests using **Vue.js**
         - Managed fleet of **Kubernetes** clusters for running continuous integration tests
-      - role: Software Developer Intern
-        employer: Vigilant Cyber Systems
+      - type: Experience
+        name: Software Developer Intern
         dates: Summer 2019
+        at: Vigilant Cyber Systems
         location: Mount Airy, NC
         details:
         - Recognized for completing 2 week **Scala** training course in 1 week
         - Created node based editor for modeling **SQL** queries
-        
-  - sections:
-    - type: Education
-      schools:
-      - name: Grove City College
-        location: Grove City, PA
+
+  # - sections:
+    - title: Education
+      items:
+      - type: Experience
+        name: Bachelor of Science in Computer Science, Cum Laude, High Honors in Computer Science
         dates: May 2020
-        degree: Bachelor of Science in Computer Science, Cum Laude, High Honors in Computer Science
+        at: Grove City College
+        location: Grove City, PA
         details:
         - "Major GPA: 3.61, cumulative GPA: 3.41"
         - Participated in Grove City's programming team and ranked competitively in regional **ICPC** contests
         - Worked as a TA for computer science classes during junior and senior years
 
-    - type: Personal Projects
-      projects:
-      - name: LineDancing2
+    - title: Personal Projects
+      items:
+      - type: Project
+        name: LineDancing2
         technology: Scala, ScalaJS
         github: Ivoah/LineDancing2
         details:
@@ -87,7 +97,8 @@ pages:
       #   github: Ivoah/RayTracing
       #   details:
       #   - Ray tracer written in **Scala** following the _Ray Tracing in One Weekend_ series
-      - name: Vial
+      - type: Project
+        name: Vial
         technology: Scala
         github: Ivoah/vial
         details:
