@@ -15,7 +15,7 @@ pages:
       - type: Markdown
         content: |
           Full stack developer with **6 years** of professional experience.
-          Passion for **functional programming** love of breaking down complex problems into elegant solutions.
+          Passion for **functional programming**, love of breaking down complex problems into elegant solutions.
           Experience in **server administration** and managing linux servers both personally and professionally.
           Casual experience with **embedded electronics** and basic electrical engineering skills.
           Looking for roles that will continue to grow my backend development skills and push me to solve interesting problems.
@@ -99,25 +99,6 @@ pages:
         - Hymnal app for iOS devices
 
   - sections:
-    - title: Other Experience
-      items:
-      - type: Experience
-        name: Camp counselor/volunteer
-        dates: 2017 - Present
-        at: Northern Frontier Camp
-        location: Indian Lake, NY
-        details:
-        - Volunteer every year at a boys wilderness camp in the Adirondack mountains of New York
-        - Responsibilities vary and have included maintenance, working in the kitchen, driving camp vehicles, and working directly with the children
-      - type: Experience
-        name: Contra council member
-        dates: 2023 - Present
-        at: Pittsburgh Contra Dance
-        location: Pittsburgh, PA
-        details:
-        - Help organize regular community contra dances
-        - Manage WordPress site and keep site up to date with information regarding dances and the organization
-
     - title: Personal Projects (cont.)
       items:
       - type: Project
@@ -149,3 +130,22 @@ pages:
         details:
         - Scala script to turn yaml file with resume details into single HTML page
         - Used to create this document
+
+    - title: Other Experience
+      items:
+      - type: Experience
+        name: Camp counselor/volunteer
+        dates: 2017 - Present
+        at: Northern Frontier Camp
+        location: Indian Lake, NY
+        details:
+        - Volunteer every year at a boys wilderness camp in the Adirondack mountains of New York
+        - Responsibilities vary and have included maintenance, working in the kitchen, driving camp vehicles, and working directly with the children
+      - type: Experience
+        name: Contra council member
+        dates: 2023 - Present
+        at: Pittsburgh Contra Dance
+        location: Pittsburgh, PA
+        details:
+        - Help organize regular community contra dances
+        - Manage WordPress site and keep site up to date with information regarding dances and the organization
