@@ -25,7 +25,7 @@ pages:
       - type: Skills
         skills:
         - name: Programming Languages
-          items: [Scala, Go, Swift, Java, Python, Lua, C#, "assembly (z80, 6502)", Wolfram, JavaScript, Perl]
+          items: [Scala, Go, Swift, Java, Python, Lua, C#, C, "assembly (z80, 6502)", Wolfram, JavaScript, Perl]
         - name: Other Languages
           items: [HTML, CSS, SQL, Regex]
         - name: Technologies
@@ -70,7 +70,6 @@ pages:
         - Recognized for completing 2 week **Scala** training course in 1 week
         - Created node based editor for modeling **SQL** queries
 
-  # - sections:
     - title: Education
       items:
       - type: Experience
@@ -80,26 +79,73 @@ pages:
         location: Grove City, PA
         details:
         - "Major GPA: 3.61, cumulative GPA: 3.41"
-        - Participated in Grove City's programming team and ranked competitively in regional **ICPC** contests
+        - Participated in Grove City's programming team and ranked competitively in regional International Collegiate Programming Contest
         - Worked as a TA for computer science classes during junior and senior years
 
     - title: Personal Projects
       items:
       - type: Project
         name: LineDancing2
-        technology: Scala, ScalaJS
+        technology: Scala, ScalaJS, Swing
         github: Ivoah/LineDancing2
         details:
         - Tool for visualizing English Country line dance formations
         - Written with purely functional core and multiple frontends (desktop and [web](https://linedancing.ivoah.net))
-      # - name: RayTracer
-      #   technology: Scala, Swing
-      #   github: Ivoah/RayTracing
-      #   details:
-      #   - Ray tracer written in **Scala** following the _Ray Tracing in One Weekend_ series
+      - type: Project
+        name: Hymndex
+        technology: Swift, SwiftUI
+        github: Ivoah/hymndex
+        details:
+        - Hymnal app for iOS devices
+
+  - sections:
+    - title: Other Experience
+      items:
+      - type: Experience
+        name: Camp counselor/volunteer
+        dates: 2017 - Present
+        at: Northern Frontier Camp
+        location: Indian Lake, NY
+        details:
+        - Volunteer every year at a boys wilderness camp in the Adirondack mountains of New York
+        - Responsibilities vary and have included maintenance, working in the kitchen, driving camp vehicles, and working directly with the children
+      - type: Experience
+        name: Contra council member
+        dates: 2023 - Present
+        at: Pittsburgh Contra Dance
+        location: Pittsburgh, PA
+        details:
+        - Help organize regular community contra dances
+        - Manage WordPress site and keep site up to date with information regarding dances and the organization
+
+    - title: Personal Projects (cont.)
+      items:
+      - type: Project
+        name: RayTracer
+        technology: Scala, ScalaJS, Swing
+        github: Ivoah/RayTracing
+        details:
+        - Ray tracer written in **Scala** following the _Ray Tracing in One Weekend_ series
+        - Compiles to desktop app and web app with same functional core
       - type: Project
         name: Vial
         technology: Scala
         github: Ivoah/vial
         details:
         - Micro web framework for **Scala**
+        - Includes custom parser for multi-part forms
+      - type: Project
+        name: letsgetmarried
+        technology: HTML, CSS, Scala
+        github: Ivoah/letsgetmarried
+        details:
+        - Custom built wedding website
+        - Used for my own wedding with success
+        - Designed to be easily customizable, all personal details are in a single yaml file
+      - type: Project
+        name: Resume
+        technology: HTML, CSS, Scala
+        github: Ivoah/resume
+        details:
+        - Scala script to turn yaml file with resume details into single HTML page
+        - Used to create this document

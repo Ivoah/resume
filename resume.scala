@@ -83,7 +83,7 @@ case class Markdown(content: String) extends SectionItem derives YamlDecoder {
 }
 
 case class Skills(skills: Seq[Skills.Skill]) extends SectionItem derives YamlDecoder {
-  def render: Frag = div(style:="display: grid; grid-template-columns: max-content 16px auto;",
+  def render: Frag = div(cls:="skills",
     skills.flatMap(skill => Seq(
       strong(skill.name), span(style:="justify-self: center;", ":"), span(skill.items.join(", "))
     ))
@@ -158,6 +158,11 @@ case class Resume(
               margin: 8px 0;
             }
           }
+        }
+
+        .skills {
+          display: grid;
+          grid-template-columns: max-content 16px auto;
         }
 
         .pageCount {position: absolute; bottom: 16px; width: 100%; text-align: center;}
