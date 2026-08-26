@@ -25,11 +25,11 @@ pages:
       - type: Skills
         skills:
         - name: Programming Languages
-          items: [Scala, Go, Swift, Java, Python, Lua, C#, C, "assembly (z80, 6502)", Wolfram, JavaScript, Perl]
+          items: [Scala, Go, Swift, Java, Python, Lua, C, C#, "assembly (z80, 6502)", Wolfram, JavaScript]
         - name: Other Languages
           items: [HTML, CSS, SQL, Regex]
         - name: Technologies
-          items: [Linux, PostgreSQL, Kubernetes, Ansible, REST, GraphQL]
+          items: [Linux, PostgreSQL, Kubernetes, Ansible, REST, SDL3]
 
     - title: Professional Experience
       items:
@@ -108,6 +108,13 @@ pages:
         details:
         - Ray tracer written in **Scala** following the _Ray Tracing in One Weekend_ series
         - Compiles to desktop app and web app with same functional core
+      - type: Project
+        name: Portalban
+        technology: C, SDL3
+        github: Ivoah/portalban
+        details:
+        - Sokoban clone written in pure **C** using **SDL3** for graphics
+        - Implemented simple custom game engine with text rendering, scene management, and input mapping
       - type: Project
         name: Vial
         technology: Scala
