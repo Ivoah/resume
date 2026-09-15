@@ -118,6 +118,7 @@ case class Resume(
 ) extends Renderable derives YamlDecoder {
   def render: Frag = html(
     head(
+      meta(name:="viewport", content:="width=device-width", attr("initial-scale"):="1.0"),
       tag("style")(raw("""
         @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
