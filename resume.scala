@@ -67,14 +67,12 @@ sealed trait SectionItem extends Renderable
 
 given YamlDecoder[SectionItem] {
   def construct(node: Node)(implicit settings: LoadSettings): Either[ConstructError, SectionItem] = {
-    node
-      .as[WithType].map(_.`type`).flatMap {
-        case "Markdown" => node.as[Markdown]
-        case "Skills" => node.as[Skills]
-        case "Experience" => node.as[Experience]
-        case "Project" => node.as[Project]
-      }
-      .left.map(_.asInstanceOf[ConstructError])
+    node.as[WithType].map(_.`type`).flatMap {
+      case "Markdown" => node.as[Markdown]
+      case "Skills" => node.as[Skills]
+      case "Experience" => node.as[Experience]
+      case "Project" => node.as[Project]
+    }.left.map(_.asInstanceOf[ConstructError])
   }
 }
 
